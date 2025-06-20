@@ -1,0 +1,1046 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+h4 {
+  font-size: 20px;
+  color: black;
+}
+h6 {
+  font-weight: 700;
+  columns: black;
+}
+p {
+  font-size: 14px;
+}
+.sectionP {
+  padding: 20px 0 0 20px;
+}
+.sectionM {
+  margin: 40px 0 0 0;
+}
+.normai-btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid black;
+  outline: none;
+  transition: 0.7s ease;
+}
+.header {
+  background-color: #c8b6ff;
+  display: flex;
+  align-items: center;
+  padding: 20px 80px;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.logo {
+  width: 8vw;
+}
+.logo img {
+  width: 100%;
+}
+#navebar {
+  display: flex;
+  justify-content: space-between;
+}
+#navebar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navebar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+#navebar li a:hover,
+#navebar li a.active {
+  color: #9300fc;
+}
+#navebar li a.active::after,
+#navebar li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  width: 30%;
+  height: 3px;
+  background-color: #9300fc;
+  color: #9300fc;
+  border-radius: 10px;
+}
+#mobile {
+  display: none;
+  align-items: center;
+}
+#cancle {
+  display: none;
+}
+/*home page*/
+#hero {
+  background-image: url("image/banner/main.jpg");
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0;
+  background-size: cover;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#hero h4 {
+  padding-bottom: 15px;
+}
+#hero h1 {
+  color: #c8b6ff;
+}
+
+#hero button {
+  background-image: url("image/icone/buttonBackground.png");
+  background-color: transparent;
+  color: #9300fc;
+  font-size: 12px;
+  border: none;
+  background-size: cover; /* or contain */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 14px 80px 14px 65px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*product 1*/
+#product1 {
+  text-align: center;
+}
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.pro-img {
+  width: 100%;
+  overflow: hidden;
+  height: 70%;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+#product1 .pro {
+  width: 23%;
+  min-width: 250;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+  margin: 15px 0;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+#product1 .pro img {
+  width: 100%;
+}
+.des {
+  text-align: start;
+  padding: 10px 0;
+}
+.des span {
+  color: #606063;
+  font-size: 12px;
+}
+.des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+.des i {
+  font-size: 12px;
+  color: rgba(246, 246, 2, 0.945);
+}
+.des h4 {
+  color: #1a1a1a;
+  font-size: #088178;
+}
+
+.cart-container {
+  position: absolute; /* Positions the cart icon absolutely within the product card */
+  bottom: 20px; /* Distance from the bottom of the card */
+  right: 20px;
+}
+.cart-icon {
+  background-color: #e0f7e9; /* Light green background */
+  width: 2.4em; /* Circle size */
+  height: 2.4em; /* Circle size */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex; /* Centers the icon */
+  align-items: center; /* Vertically centers */
+  justify-content: center; /* Horizontally centers */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  cursor: pointer;
+}
+
+.cart-icon i {
+  font-size: 18px; /* Adjust icon size */
+  color: #007b7f; /* Icon color */
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-image: url("image/banner/call-to-action.png");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner button:hover {
+  background-color: transparent;
+  border: 2px solid #9300fc;
+  color: #9300fc;
+}
+#sm-banner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+#sm-banner #banner-box2 {
+  background-image: url("image/banner/banner3.jpg");
+  align-items: flex-end;
+}
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  background-image: url("image/banner/banner2.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+.banner-box button {
+  background-color: transparent;
+  border: 2px solid #9300fc;
+  color: #9300fc;
+  margin-top: 20px;
+}
+.banner-box:hover button {
+  background-color: #d1a7fbf8;
+  border: 2px solid #5c5573;
+  color: black;
+}
+
+.banner-box h4 {
+  color: #fff;
+}
+#banner3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+#banner3 .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  background-image: url("image/banner/banner4.jpg");
+  min-width: 30%;
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+#banner3 .banner-box3 {
+  background-image: url("image/banner/banner5.webp");
+}
+#banner3 .banner-box4 {
+  background-image: url("image/banner/banner6.jpg");
+}
+#banner3 h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+#banner3 h3 {
+  color: rgb(232, 238, 43);
+  font-weight: 800;
+  font-size: 15px;
+}
+.banner-box4 #w-coll {
+  color: #000;
+}
+#sign-up {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("image/banner/cloth\ banner\ 2.jpg!f305cw");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+  padding: 40px;
+}
+#sign-up .news span {
+  color: #9300fc;
+}
+#sign-up .form {
+  display: flex;
+  width: 40%;
+}
+#sign-up input {
+  height: 4.125rem;
+  padding: 0 1.25em;
+  font-size: 20px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#sign-up button {
+  background-color: #c8b6ff;
+
+  border: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.footer-box {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer {
+  align-items: center;
+  text-align: center;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+footer h4 {
+  margin-top: 30px;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+}
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 10px;
+}
+footer .follow {
+  margin-top: 20px;
+}
+footer .follow i {
+  padding: 4px;
+  cursor: pointer;
+}
+/* .play{
+    width: 23%;
+    height: 30%;
+    background-size: cover;
+    background-image: url("image/icone/playstore-removebg-preview.png");
+}
+.pay{
+    width: 100%;
+    height: 40%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url("image/icone/Tiny-Payment-Method-Icons.webp");
+} */
+.foot-img image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+}
+
+/*shop section*/
+#shop-main-banner {
+  background-image: url("image/banner/product-banner-main.jpg");
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+#shop-main-banner h2 {
+  font-size: 30px;
+  color: #9300fc;
+}
+#shop-main-banner p {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
+
+#pagination {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+#pagination a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: #c8b6ff;
+  font-weight: 600;
+}
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+#pro-detail {
+  display: flex;
+  padding: 50px;
+}
+#pro-detail .single-main-img {
+  margin-right: 50px;
+  width: 40%;
+}
+.group-pro-image {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+.small-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image ko div ke andar fit karega bina space diye */
+  display: block;
+}
+
+#pro-detail .detail {
+  width: 50%;
+  padding-top: 30px;
+  margin-left: 40px;
+}
+#pro-detail .detail h4 {
+  padding: 40px 0 20px 0;
+}
+#pro-detail .detail h2 {
+  font-size: 25px;
+}
+#pro-detail .detail select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#pro-detail .detail input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+#pro-detail .detail input:focus {
+  outline: none;
+}
+#pro-detail .detail button {
+  background-color: #088178;
+  color: #fff;
+}
+#pro-detail .detail span {
+  line-height: 25px;
+  color: #7b7b88;
+}
+
+/*Blog section*/
+
+#shop-main-banner.blogbanner {
+  background-image: url("image/banner/bb.webp");
+}
+#shop-main-banner.blogbanner h2 {
+  color: #000;
+}
+#shop-main-banner.blogbanner p {
+  color: #000;
+}
+#blog {
+  padding: 150px 150px 0 150px;
+}
+#blog .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  line-height: 30px;
+  padding-bottom: 100px;
+}
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+}
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+#blog .blog-text {
+  width: 50%;
+}
+#blog .blog-text a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+#blog .blog-text a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+#blog .blog-text a:hover {
+  color: #088178;
+}
+#blog .blog-text a:hover::after {
+  background-color: #088178;
+}
+#blog .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  font-size: 70px;
+  font-weight: 700;
+  color: #7b7b88;
+  z-index: -2;
+}
+
+/* Add your about section styles here */
+#shop-main-banner.about-banner {
+  background-image: url("image/banner/book.jpg");
+}
+#shop-main-banner.about-banner h2 {
+  color: #000;
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+#about-head img {
+  width: 50%;
+  padding: 100px 0 0 100px;
+  height: auto;
+}
+#about-head div {
+  padding: 0 40px;
+}
+#about-head marquee {
+  background-color: #ccc;
+  width: 100%;
+}
+#about-app {
+  text-align: center;
+  padding: 100px 0 0 100px;
+}
+#about-app .video {
+  width: 70%;
+  height: 70%;
+  margin: 30px auto 0 auto;
+}
+#about-app .video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#shop-main-banner.contact-banner {
+  background-image: url("image/product/contect.jpg");
+}
+#contact-details {
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-details .details {
+  width: 40%;
+}
+#contact-details .details span,
+#form-details form span {
+  font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#contact-details .details li i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+#contact-details .details li p {
+  color: #7b7b88;
+  margin: 0;
+  font-size: 14px;
+}
+#contact-details .map {
+  width: 55%;
+  height: 400px;
+}
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+#form-details {
+  padding: 80px;
+  display: flex;
+}
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #cce7d0;
+}
+#form-details form button {
+  background-color: #4caf50;
+  color: #fff;
+}
+#form-details .people {
+  padding: 40px;
+}
+#form-details .people div {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+#form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+#form-details .people div p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+/*cart page
+ ------------------------------------------------*/
+#cart {
+  overflow-x: auto;
+}
+#cart table {
+  width: 100%;
+  padding: 70px;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 80px;
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+#cart table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+#cart table thead {
+  border: 1px solid #e2e2e2;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 0;
+}
+
+#cart-add {
+  padding: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+#coupon button,
+#subtotal button {
+  padding: 12px 20px;
+  background-color: #007b7f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+#subtotal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Add your media query styles here */
+
+@media (max-width: 1150px) {
+  #navebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -330px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navebar.active {
+    right: 0px;
+  }
+  #navebar li {
+    margin: 15px 0;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    font-size: 24px;
+    color: #1a1a1a;
+    padding-left: 20px;
+  }
+  #navebar a {
+    text-decoration: none;
+  }
+  #cancle {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #000;
+    font-size: 24px;
+  }
+  #navebar .m-shop {
+    display: none;
+  }
+
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+  .pro-container {
+    justify-content: center;
+  }
+  #product1 .pro {
+    width: 45%;
+    margin: 15px;
+  }
+  #banner {
+    height: 25vh;
+  }
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+  #banner3 .banner-box {
+    width: 28%;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    width: 100%;
+    padding: 10px 10px 20px 0px;
+  }
+  .logo {
+    width: 20vw;
+  }
+  #navebar {
+    width: 200px;
+  }
+  #shop-main-banner {
+    background-position: -124px;
+  }
+  #hero {
+    height: 400px;
+    padding: 0 30px;
+    background-size: cover;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 10px;
+  }
+  #hero button {
+    font-size: 10px;
+
+    padding: 10px 60px 10px 45px;
+  }
+  #product1 {
+    padding: 0;
+  }
+  #product1 .pro {
+    width: 100%;
+  }
+  #banner {
+    padding-top: 40px;
+    height: 150px;
+    margin: 0;
+  }
+  .normai-btn {
+    padding: 8px 20px;
+  }
+
+  #banner3 {
+    display: block;
+    padding: 20px;
+  }
+  #banner3 .banner-box {
+    min-width: 100%;
+  }
+  #sm-banner {
+    padding: 20px;
+  }
+  #sign-up {
+    padding: 10px 20px;
+  }
+  #sign-up .form {
+    width: 100%;
+  }
+  #sign-up input {
+    height: 2.125rem;
+    padding: 0.625em;
+    font-size: 10px;
+    width: 70%;
+  }
+  #sign-up button {
+    padding: 0 2.725em;
+    font-size: 7px;
+  }
+  footer .col {
+    margin-bottom: 15px;
+  }
+  footer .col h4 {
+    font-size: 10px;
+  }
+  footer .col a {
+    font-size: 8px;
+  }
+  footer p {
+    font-size: 9px;
+  }
+  footer {
+    /* text-align: start; */
+    align-items: start;
+    justify-content: flex-start;
+  }
+
+  #pro-detail {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+  }
+  #pro-detail .single-main-img {
+    margin: 5px;
+    width: 100%;
+  }
+  #pro-detail .detail {
+    line-height: 10px;
+    width: 100%;
+    margin: 15px;
+  }
+  #blog {
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  #shop-main-banner.blogbanner {
+    height: 3%;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  #about-head img {
+    padding: 20px;
+  }
+  #about-head div {
+    padding: 20px;
+  }
+  #about-app {
+    padding: 20px;
+  }
+  #contact-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-details .details {
+    width: 100%;
+  }
+  #contact-details .map {
+    width: 100%;
+  }
+  #form-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  #form-details .people {
+    padding: 10px;
+  }
+  #form-details form {
+    width: 100%;
+    align-items: center;
+  }
+  #shop-main-banner.contact-banner {
+    background-position: -55px;
+    height: 150px;
+  }
+
+  #cart-add {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #coupon {
+    width: 100%;
+  }
+
+  #subtotal {
+    width: 100%;
+  }
+}
